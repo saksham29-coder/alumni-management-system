@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni Management System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <h1>🎓 Alumni Management System</h1>
+
+        <div class="card">
+            <h3>Search Directory</h3>
+            <form action="/search" method="POST" class="inline-form">
+                <select name="search_type">
+                    <option value="year">Graduation Year</option>
+                    <option value="company">Company</option>
+                </select>
+                <input type="text" name="query" placeholder="Type search here..." required>
+                <button type="submit" class="btn btn-search">Search</button>
+                <a href="/" class="btn btn-clear">Clear Filter</a>
+            </form>
+        </div>
+
+        <div class="card">
+            <h3>Add New Alumnus Record</h3>
+            <form action="/add" method="POST" class="grid-form">
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="number" name="year" placeholder="Graduation Year" required>
+                <input type="text" name="degree" placeholder="Degree / Major">
+                <input type="text" name="company" placeholder="Current Company">
+                <input type="email" name="email" placeholder="Email Address">
+                <button type="submit" class="btn btn-success">Add Alumni</button>
+            </form>
+        </div>
+
+        <h2>Alumni Directory</h2>
+        <div class="alumni-grid">
+            {% for alumni in alumni_list %}
+            <div class="alumni-card">
+                <div class="badge">{{ alumni.alumni_id }}</div>
+                <h3>{{ alumni.name }}</h3>
+                <p><strong>Class of:</strong> {{ alumni.graduation_year }}</p>
+                <p><strong>Degree:</strong> {{ alumni.degree }}</p>
+                <p><strong>Company:</strong> {{ alumni.current_company }}</p>
+                <p><strong>Email:</strong> {{ alumni.email }}</p>
+            </div>
+            {% else %}
+            <p>No alumni records found matching that criteria.</p>
+            {% endfor %}
+        </div>
+    </div>
+
+</body>
+</html>

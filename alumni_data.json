@@ -1,0 +1,26 @@
+[
+    {
+        "alumni_id": "A101",
+        "name": "Sambhav singh",
+        "graduation_year": "2024",
+        "degree": "Computer Science",
+        "current_company": "Google",
+        "email": "Sambhav@gmail.com"
+    },
+    {
+        "alumni_id": "A102",
+        "name": "Rudra",
+        "graduation_year": "2024",
+        "degree": "Data Science",
+        "current_company": "Amazon",
+        "email": "Rudra@yahoo.com"
+    },
+    {
+        "alumni_id": "A103",
+        "name": "Saksham",
+        "graduation_year": "2025",
+        "degree": "B.tech",
+        "current_company": "Anthrophobic",
+        "email": "sakshamiit29@gmail.com"
+    }
+]

@@ -1,6 +1,7 @@
 # 🎓 Alumni Management System
 
 A full-stack web application designed to manage, track, and search university alumni records. Built in 2 days using a modular, lightweight architecture.
+![Alumni System Dashboard](assets/screenshot.jpeg)
 
 ## 👥 Team Collaboration (MVC Pattern)
 This project was built by a team of three using the Model-View-Controller design pattern to ensure parallel development:
